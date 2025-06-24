@@ -9,6 +9,7 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Inter', sans-serif; color: #1e1e1e; background: #fdfbff; line-height: 1.6; }
+
     header {
       background: radial-gradient(circle at top left, #7a00f1, #d400ac, #1b0b3a);
       color: white;
@@ -29,8 +30,10 @@
       max-width: 600px;
       margin: 0 auto;
     }
+
     .container { padding: 2.5rem; max-width: 960px; margin: auto; }
     .section { margin-bottom: 3rem; }
+
     h2 {
       font-size: 1.8rem;
       color: #7000b6;
@@ -47,7 +50,9 @@
       bottom: -8px;
       border-radius: 2px;
     }
+
     ul { list-style: disc inside; padding-left: 1rem; }
+
     .highlight {
       background: linear-gradient(135deg, #f4e6ff, #fff0f8);
       padding: 1.8rem;
@@ -55,17 +60,21 @@
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
       margin: 2rem 0;
     }
+
     .cta {
       text-align: center;
       margin-top: 4rem;
       padding: 0 1rem;
+      overflow-wrap: break-word;
     }
+
     .cta a {
       display: inline-block;
-      max-width: 100%;
+      width: 100%;
+      max-width: 320px;
       background: #7000b6;
       color: white;
-      padding: 1rem 2rem;
+      padding: 1rem;
       font-size: 1rem;
       border-radius: 10px;
       text-decoration: none;
@@ -73,11 +82,14 @@
       transition: all 0.3s ease;
       white-space: normal;
       box-sizing: border-box;
+      word-wrap: break-word;
     }
+
     .cta a:hover {
       background: #540088;
       transform: translateY(-2px);
     }
+
     footer {
       text-align: center;
       padding: 2rem;
