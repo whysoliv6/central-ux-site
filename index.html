@@ -8,41 +8,35 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     * {
-      margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
     }
     body {
       font-family: 'Inter', sans-serif;
-      background: #f5f0fa; /* tom lilás suave, menos branco */
+      background: #fdfbff;
       color: #1e1e1e;
       line-height: 1.6;
     }
-    /* NAVBAR estilo Mobbin */
+
+    /* NAVBAR */
     nav {
-      background: #e5d7f7; /* lilás claro */
+      background: #f5f5f5;
       border-radius: 999px;
       padding: 0.8rem 2rem;
       margin: 1.5rem auto;
       max-width: 1000px;
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap; /* para responsivo */
-      gap: 0.8rem;
-      box-shadow: 0 4px 15px rgba(112, 0, 182, 0.15);
-      transition: background-color 0.3s ease;
-    }
-    nav:hover {
-      background: #d6c0f0; /* efeito hover suave */
+      gap: 1rem;
     }
     nav a {
       text-decoration: none;
-      color: #3a0ca3;
+      color: #222;
       font-size: 0.95rem;
-      white-space: nowrap; /* evita quebra */
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #7000b6;
     }
     nav a.cta {
       background: #7000b6;
@@ -52,33 +46,22 @@
       font-weight: 600;
       box-shadow: 0 6px 18px rgba(112, 0, 182, 0.4);
       transition: all 0.3s ease;
-      white-space: nowrap;
     }
     nav a.cta:hover {
       background: #540088;
       transform: translateY(-3px);
     }
     nav div:first-child {
-      display: flex; 
-      align-items: center; 
+      display: flex;
+      align-items: center;
       gap: 10px;
-      flex-shrink: 0;
-    }
-    nav div:last-child {
-      display: flex; 
-      align-items: center; 
-      gap: 1.5rem;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      flex-grow: 1;
     }
     nav img {
       width: 32px;
       height: 32px;
-      object-fit: contain;
     }
 
-    /* HEADER com mockup e animação */
+    /* HEADER */
     header {
       text-align: center;
       padding: 6rem 2rem 3rem;
@@ -97,7 +80,7 @@
       100% { transform: translateY(0); }
     }
     header h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       font-weight: 700;
       color: #7000b6;
       margin-bottom: 1rem;
@@ -108,6 +91,7 @@
       max-width: 600px;
       margin: 0 auto 2rem;
     }
+
     .cta-buttons {
       display: flex;
       justify-content: center;
@@ -123,7 +107,6 @@
       font-size: 1rem;
       transition: all 0.3s ease;
       box-shadow: 0 6px 18px rgba(112, 0, 182, 0.4);
-      white-space: nowrap;
     }
     .cta-buttons a.primary {
       background: #7000b6;
@@ -143,7 +126,7 @@
       transform: translateY(-4px);
     }
 
-    /* MOCKUP interativo */
+    /* MOCKUP */
     .mockup {
       perspective: 1000px;
       max-width: 800px;
@@ -161,7 +144,6 @@
       transform: rotateY(6deg) rotateX(6deg) scale(1.02);
     }
 
-    /* CONTAINER para conteúdo principal */
     .container {
       padding: 0 2.5rem 4rem;
       max-width: 960px;
@@ -187,23 +169,40 @@
       bottom: -8px;
       border-radius: 2px;
     }
-    ul {
-      list-style: disc inside;
-      padding-left: 1rem;
+
+    /* CARDS */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .card {
+      background: #f4e6ff;
+      border: 1px solid #e0cfff;
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 24px rgba(112, 0, 182, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(112, 0, 182, 0.15);
+    }
+    .card h3 {
+      font-size: 1.1rem;
+      color: #7000b6;
+      margin-bottom: 0.5rem;
+    }
+    .card p {
+      font-size: 0.95rem;
       color: #333;
     }
 
-    /* Destaques */
-    .highlight {
-      background: linear-gradient(135deg, #f4e6ff, #fff0f8);
-      padding: 1.8rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-      margin: 2rem 0;
+    .highlight, .urgency, ul {
       color: #333;
     }
 
-    /* Urgência */
     .urgency {
       background: #ffeff3;
       color: #b6003a;
@@ -215,16 +214,15 @@
       border-radius: 10px;
     }
 
-    /* Depoimentos */
     .depoimento {
-      background: img src="Dark_4.png" no-repeat center/contain;
+      background: url('Dark_4.png') no-repeat center/contain;
       max-width: 400px;
       margin: 4rem auto 5rem;
       border-radius: 20px;
-      height: auto;
       aspect-ratio: 3/4;
       box-shadow: 0 8px 28px rgba(0,0,0,0.15);
     }
+
     .testimonials {
       font-style: italic;
       color: #333;
@@ -232,16 +230,14 @@
       border-left: 4px solid #7000b6;
       padding: 1rem;
       border-radius: 10px;
-      margin: 2rem 0;
+      margin: 2rem auto;
       max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
     }
 
-    /* FOOTER escuro */
+    /* FOOTER */
     footer {
-      background: #e5d7f7;
-      color: #ccc;
+      background: #f5f5f5;
+      color: #444;
       padding: 3rem 2rem;
       display: flex;
       flex-wrap: wrap;
@@ -270,7 +266,7 @@
       gap: 0.4rem;
     }
     footer a {
-      color: #eee;
+      color: #7000b6;
       text-decoration: none;
     }
     footer a:hover {
@@ -281,67 +277,23 @@
       text-align: center;
       width: 100%;
       font-size: 0.85rem;
-      color: #fffff;
+      color: #7000b6;
     }
 
-    /* RESPONSIVO */
-    @media (max-width: 768px) {
+    @media (max-width: 600px) {
       nav {
-        padding: 1rem 1.2rem;
-        gap: 0.6rem;
-      }
-      nav div:last-child {
-        justify-content: center;
-        gap: 1rem;
-      }
-      nav a {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
-      }
-      nav a.cta {
-        padding: 0.5rem 1rem;
-        font-size: 0.95rem;
-      }
-      header h1 {
-        font-size: 2.2rem;
-      }
-      header p {
-        font-size: 1rem;
-        max-width: 100%;
-        padding: 0 1rem;
-      }
-      .mockup {
-        max-width: 100%;
-        padding: 0 1rem;
-      }
-      .container {
-        padding: 0 1.5rem 3rem;
-      }
-      .cta-buttons {
         flex-direction: column;
-        gap: 0.7rem;
+        align-items: flex-start;
       }
-      footer {
-        flex-direction: column;
-        gap: 1.5rem;
-        padding: 2rem 1.5rem;
-      }
-      footer .links {
-        flex-direction: column;
-        gap: 1.2rem;
-      }
-      footer .brand {
-        flex: none;
-        text-align: center;
-      }
-      footer .bottom {
-        font-size: 0.8rem;
+      .card-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 <body>
-  <!-- NAVBAR ESTILO MOBBIN -->
+
+  <!-- NAV -->
   <nav>
     <div>
       <img src="ICON CENTRAL UX.png" alt="Logo Central UX" />
@@ -350,12 +302,12 @@
     <div>
       <a href="#sobre">Sobre</a>
       <a href="#video">Ver Template</a>
-      <a href="‎https://chat.whatsapp.com/ByC4H8EJh5B25DoZW5UY8A?mode=ac_c">Comunidade no WhatsApp</a>
+      <a href="https://chat.whatsapp.com/ByC4H8EJh5B25DoZW5UY8A?mode=ac_c">Comunidade</a>
       <a href="https://mpago.la/2UiSpnp" class="cta">Quero o meu</a>
     </div>
   </nav>
 
-  <!-- HERO SECTION COM MOCKUP -->
+  <!-- HERO -->
   <header>
     <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" alt="Ícone Notion" class="logo" />
     <h1>Organize seus projetos de UX com clareza e método</h1>
@@ -365,44 +317,44 @@
       <a href="#video" class="secondary">🎥 Ver o template</a>
     </div>
     <div class="mockup">
-      <img src= "ZenBook Duo 14.png" alt="Mockup do Central UX" />
+      <img src="ZenBook Duo 14.png" alt="Mockup do Central UX" />
     </div>
   </header>
 
-  <!-- CONTEÚDO PRINCIPAL -->
+  <!-- MAIN -->
   <main class="container">
+
     <section id="sobre" class="urgency">
-      ⚠ Oferta limitada: compre hoje e receba uma call sem custo para tirar dúvidas e saber como ele funciona!
+      ⚠ Oferta limitada: compre hoje e receba uma call gratuita para tirar dúvidas e explorar o template!
     </section>
 
-    <section class="section">
-      <h2>O que é o Central UX?</h2>
-      <p>Um template 100% prático no Notion, feito para centralizar seu processo de UX do início ao fim: pesquisa, jornada, entrega e tudo mais. Ideal para quem quer parar de se perder e começar a se destacar.</p>
-    </section>
-
+    <!-- Você vai encontrar -->
     <section class="section">
       <h2>Você vai encontrar:</h2>
-      <ul>
-        <li>📁 Página inicial com navegação estratégica</li>
-        <li>🧩 Seções para pesquisa, jornada, personas e backlog</li>
-        <li>📌 Layout 100% customizável</li>
-        <li>💡 Modelos e guias internos para facilitar seu uso</li>
-        <li>⚡ Link de duplicação imediata e acesso instantâneo</li>
-      </ul>
+      <div class="card-grid">
+        <div class="card"><h3>📁 Navegação estratégica</h3><p>Homepage que facilita o acesso a todas as áreas do projeto UX.</p></div>
+        <div class="card"><h3>🧩 Estrutura completa</h3><p>Pesquisa, jornada, backlog, personas e muito mais.</p></div>
+        <div class="card"><h3>📌 Totalmente editável</h3><p>Flexível, simples e adaptável ao seu fluxo.</p></div>
+        <div class="card"><h3>💡 Guias internos</h3><p>Modelos e dicas para aplicar de forma fácil.</p></div>
+        <div class="card"><h3>⚡ Acesso imediato</h3><p>Compre e comece agora mesmo com 1 clique.</p></div>
+      </div>
     </section>
 
-    <section class="highlight">
+    <!-- Para quem é -->
+    <section class="section">
       <h2>Para quem é?</h2>
-      <p>✅ Estudantes de UX/UI<br>
-         ✅ Profissionais que querem se organizar<br>
-         ✅ Times e freelancers que precisam de processos claros<br>
-         ✅ Criadores de produtos que desejam mapear experiências reais</p>
+      <div class="card-grid">
+        <div class="card"><h3>👩‍🎓 Estudantes de UX/UI</h3><p>Aprenda na prática como estruturar projetos reais.</p></div>
+        <div class="card"><h3>💼 Profissionais</h3><p>Ganhe produtividade e organização no dia a dia.</p></div>
+        <div class="card"><h3>🤝 Freelancers e times</h3><p>Padronize seus processos com clareza.</p></div>
+        <div class="card"><h3>🚀 Criadores de produtos</h3><p>Mapeie jornadas e entregue valor com UX.</p></div>
+      </div>
     </section>
 
     <section class="section">
       <h2>Depoimentos 💬</h2>
       <div class="testimonials">
-        “Finalmente encontrei uma forma de organizar meus projetos sem surtar. Obrigada, Vitoria!” – Kauan Alves, estudante de UX e Designer.<br><br>
+        “Finalmente encontrei uma forma de organizar meus projetos sem surtar. Obrigada, Vitoria!” – Kauan Alves, estudante de UX e Designer.
       </div>
       <div class="depoimento"></div>
     </section>
@@ -429,13 +381,14 @@
     <div class="cta-buttons" style="justify-content:center; margin-top: 2rem;">
       <a href="https://mpago.la/2UiSpnp" class="primary">🚀 Comprar agora – R$19,90</a>
     </div>
+
   </main>
 
-  <!-- FOOTER ESCURO -->
+  <!-- FOOTER -->
   <footer>
     <div class="brand">
       <img src="ICON CENTRAL UX.png" alt="Central UX" />
-      <p>Design para quem quer começar com o pé direito.</p>
+      <p>Design para quem quer começar com o pé direito. Simples, prático e humano.</p>
     </div>
     <div class="links">
       <div>
@@ -447,7 +400,7 @@
         <strong>Suporte</strong>
         <a href="mailto:centralux0@gmail.com">Email</a>
         <a href="https://www.instagram.com/central_ux/">Instagram</a>
-        <a href="https://chat.whatsapp.com/ByC4H8EJh5B25DoZW5UY8A?mode=ac_c">Comunidade WhatsApp</a>
+        <a href="https://chat.whatsapp.com/ByC4H8EJh5B25DoZW5UY8A?mode=ac_c">Comunidade</a>
       </div>
       <div>
         <strong>Legal</strong>
@@ -456,9 +409,10 @@
       </div>
     </div>
     <div class="bottom">
-      © 2025 Central UX · Feito com ♥ por Vitoria Oliveira 
+      © 2025 Central UX · Feito com ♥ por Vitoria Oliveira · Todos os direitos reservados.
     </div>
   </footer>
 </body>
 </html>
+
 
