@@ -4,31 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Central UX: o template definitivo para designers, freelancers e times organizarem seus projetos de UX com clareza e método.">
-  <title>Central UX | Template Notion para UX Designers</title>
+  <title>Central UX | Organize seus Projetos de UX Agora</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
     body {
       font-family: 'Inter', sans-serif;
-      background: #0e0018;
-      color: #ffffff;
+      background: #0f0f0f;
+      color: #fff;
       line-height: 1.6;
     }
     nav {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: #1b0b3a;
       border-radius: 999px;
       padding: 0.8rem 2rem;
       margin: 1.5rem auto;
       max-width: 1000px;
       display: flex;
-      align-items: center;
+      flex-wrap: wrap;
       justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
     }
     nav a {
       text-decoration: none;
@@ -36,7 +32,7 @@
       font-size: 0.95rem;
     }
     nav a.cta {
-      background: #7000b6;
+      background: #d400ac;
       color: #fff;
       padding: 0.6rem 1.4rem;
       border-radius: 50px;
@@ -44,35 +40,37 @@
     }
     header {
       text-align: center;
-      padding: 6rem 2rem 3rem;
+      padding: 4rem 1rem 2rem;
       background: radial-gradient(circle at top left, #7a00f1, #d400ac, #1b0b3a);
     }
     .hero {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 2rem;
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: auto;
     }
     .hero img.logo {
-      width: 80px;
+      width: 70px;
       animation: float 4s ease-in-out infinite;
     }
     .hero h1 {
-      font-size: 2.4rem;
+      font-size: 2.2rem;
       font-weight: 700;
-      max-width: 600px;
+      text-align: center;
     }
     .hero p {
-      font-size: 1.1rem;
+      font-size: 1rem;
       max-width: 600px;
-      color: #e0d4e8;
+      text-align: center;
     }
     .cta-buttons {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       gap: 1rem;
-      flex-wrap: wrap;
-      margin-top: 1.5rem;
+      margin-top: 1rem;
     }
     .cta-buttons a {
       padding: 0.9rem 1.6rem;
@@ -81,10 +79,10 @@
       text-decoration: none;
       font-size: 1rem;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
     }
     .cta-buttons a.primary {
-      background: #ffffff;
+      background: #fff;
       color: #7000b6;
     }
     .cta-buttons a.primary:hover {
@@ -100,53 +98,32 @@
       background: rgba(255,255,255,0.1);
       transform: translateY(-4px);
     }
-    .mockup {
-      margin-top: 2rem;
-      perspective: 1000px;
-    }
     .mockup img {
       max-width: 100%;
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-      transition: transform 0.3s ease;
-    }
-    .mockup img:hover {
-      transform: rotateY(6deg) rotateX(6deg) scale(1.02);
     }
     .container {
       max-width: 1000px;
       margin: auto;
-      padding: 2rem;
+      padding: 2rem 1rem;
     }
     h2 {
       font-size: 1.8rem;
       color: #f4e6ff;
       margin-bottom: 1rem;
-      position: relative;
-    }
-    h2::after {
-      content: '';
-      width: 40px;
-      height: 4px;
-      background: #d400ac;
-      position: absolute;
-      left: 0;
-      bottom: -8px;
-      border-radius: 2px;
     }
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 1.5rem;
-      margin-top: 1rem;
     }
     .card {
-      background: rgba(255,255,255,0.05);
+      background: #1b0b3a;
       padding: 1.5rem;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       text-align: center;
-      color: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
     .card span {
       font-size: 2rem;
@@ -157,26 +134,24 @@
       background: #b6003a;
       color: #fff;
       padding: 1rem;
-      border-left: 6px solid #ffb6c1;
       font-weight: 600;
       text-align: center;
       border-radius: 10px;
       margin: 2rem 0;
     }
     .highlight {
-      background: linear-gradient(135deg, #2b003d, #3d004f);
+      background: linear-gradient(135deg, #2b0a3d, #1f0f2e);
       padding: 2rem;
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     }
     .testimonials {
-      font-style: italic;
-      background: #2b003d;
+      background: #1b0b3a;
       border-left: 4px solid #7000b6;
-      color: #ddd;
       padding: 1rem;
       border-radius: 10px;
       margin: 2rem 0;
+      font-style: italic;
     }
     video {
       border-radius: 12px;
@@ -184,7 +159,7 @@
       margin-top: 1rem;
     }
     footer {
-      background: #0f0f0f;
+      background: #000;
       color: #ccc;
       padding: 3rem 2rem;
       display: flex;
@@ -200,20 +175,36 @@
     footer a:hover {
       text-decoration: underline;
     }
+    .bottom {
+      text-align: center;
+      width: 100%;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: #777;
+    }
     @keyframes float {
       0% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
       100% { transform: translateY(0); }
+    }
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .hero h1 { font-size: 1.8rem; }
+      .hero p { font-size: 0.95rem; }
+      .cta-buttons { flex-direction: column; align-items: center; }
     }
   </style>
 </head>
 <body>
   <nav>
     <div style="display: flex; align-items: center; gap: 10px;">
-      <img src="https://via.placeholder.com/32" alt="Logo Central UX" />
-      <strong style="font-size: 1rem; color: #fff">Central UX</strong>
+      <img src="https://via.placeholder.com/32" alt="Logo Central UX">
+      <strong style="font-size: 1rem; color: #fff;">Central UX</strong>
     </div>
-    <div style="display: flex; align-items: center; gap: 1.5rem;">
+    <div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
       <a href="#sobre">Sobre</a>
       <a href="#video">Ver Template</a>
       <a href="#contato">Contato</a>
@@ -223,7 +214,7 @@
 
   <header>
     <div class="hero">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" alt="Ícone Notion" class="logo" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" alt="Notion Logo" class="logo">
       <h1>Organize seus projetos de UX com clareza e método</h1>
       <p>Template prático no Notion para estudantes, freelancers e profissionais que querem parar de se perder e começar a se destacar.</p>
       <div class="cta-buttons">
@@ -231,7 +222,7 @@
         <a href="#video" class="secondary">🎥 Ver o template</a>
       </div>
       <div class="mockup">
-        <img src="https://via.placeholder.com/800x500.png?text=Mockup+do+Template" alt="Mockup do Central UX" />
+        <img src="https://via.placeholder.com/800x500.png?text=Mockup+do+Template" alt="Mockup do Central UX">
       </div>
     </div>
   </header>
@@ -245,8 +236,8 @@
         <div class="card"><span>📁</span>Página inicial com navegação estratégica</div>
         <div class="card"><span>🧩</span>Seções para pesquisa, jornada, personas e backlog</div>
         <div class="card"><span>📌</span>Layout 100% customizável</div>
-        <div class="card"><span>💡</span>Modelos e guias internos para facilitar seu uso</div>
-        <div class="card"><span>⚡</span>Link de duplicação imediata e acesso instantâneo</div>
+        <div class="card"><span>💡</span>Modelos e guias internos</div>
+        <div class="card"><span>⚡</span>Link de duplicação imediato</div>
       </div>
     </section>
 
@@ -254,7 +245,7 @@
       <h2>Para quem é?</h2>
       <div class="cards">
         <div class="card"><span>👩‍🎓</span>Estudantes de UX/UI</div>
-        <div class="card"><span>🧑‍💼</span>Profissionais que querem se organizar</div>
+        <div class="card"><span>🧑‍💼</span>Profissionais organizados</div>
         <div class="card"><span>🤝</span>Times e freelancers</div>
         <div class="card"><span>🚀</span>Criadores de produtos</div>
       </div>
@@ -263,7 +254,7 @@
     <section>
       <h2>Depoimentos 💬</h2>
       <div class="testimonials">
-        “Finalmente encontrei uma forma de organizar meus projetos sem surtar. Obrigada, Vitoria!” – Kauan Alves, estudante de UX e Designer.
+        “Finalmente encontrei uma forma de organizar meus projetos sem surtar. Obrigada, Vitoria!” – Kauan Alves
       </div>
     </section>
 
@@ -271,7 +262,7 @@
       <h2>Veja o template em ação 🎥</h2>
       <p>Confira o vídeo com uma prévia de tudo que você vai receber:</p>
       <video controls>
-        <source src="Gravacao-de-Tela-2025-06-22-212845.mp4" type="video/mp4">
+        <source src="Gravação%20de%20Tela%202025-06-22%20212845.mp4" type="video/mp4">
         Seu navegador não suporta o vídeo.
       </video>
     </section>
@@ -284,7 +275,7 @@
 
   <footer>
     <div class="brand">
-      <img src="https://via.placeholder.com/120x30?text=Central+UX" alt="Central UX" />
+      <img src="https://via.placeholder.com/120x30?text=Central+UX" alt="Central UX">
       <p>Design para quem quer começar com o pé direito. Simples, prático e humano.</p>
     </div>
     <div class="links">
@@ -298,7 +289,6 @@
         <strong>Suporte</strong>
         <a href="mailto:centralux0@gmail.com">Email</a>
         <a href="https://www.instagram.com/central_ux/">Instagram</a>
-        <a href="#">Twitter</a>
       </div>
       <div>
         <strong>Legal</strong>
