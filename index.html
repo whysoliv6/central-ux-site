@@ -7,105 +7,28 @@
   <title>Central UX | Organize seus Projetos de UX Agora</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #ffffff;
-      color: #1e1e1e;
-      line-height: 1.6;
-    }
-    nav {
-      background: #f5f5f5;
-      border-radius: 999px;
-      padding: 0.8rem 2rem;
-      margin: 1.5rem auto;
-      max-width: 1000px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-    nav a {
-      text-decoration: none;
-      color: #222;
-      font-size: 0.95rem;
-    }
-    nav a.cta {
-      background: #111;
-      color: #fff;
-      padding: 0.6rem 1.4rem;
-      border-radius: 50px;
-      font-weight: 600;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #fdfbff; color: #1e1e1e; line-height: 1.6; }
     header {
       background: radial-gradient(circle at top left, #7a00f1, #d400ac, #1b0b3a);
-      color: #fff;
-      padding: 4rem 2rem;
+      color: white;
+      padding: 5rem 2rem 3rem;
       text-align: center;
     }
-    .hero {
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-    }
-    .hero h1 {
-      font-size: 2.5rem;
+    header img { max-width: 140px; margin-bottom: 1rem; }
+    header h1 {
+      font-size: 2.8rem;
       font-weight: 700;
+      margin-bottom: 1rem;
     }
-    .hero p {
-      font-size: 1.1rem;
+    header p {
+      font-size: 1.2rem;
       max-width: 600px;
+      margin: 0 auto;
     }
-    .cta-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    .cta-buttons a {
-      padding: 0.9rem 1.6rem;
-      font-weight: 600;
-      border-radius: 50px;
-      text-decoration: none;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-    }
-    .cta-buttons a.primary {
-      background: #ffffff;
-      color: #7000b6;
-    }
-    .cta-buttons a.primary:hover {
-      background: #f4e6ff;
-      transform: translateY(-4px);
-    }
-    .cta-buttons a.secondary {
-      border: 2px solid #fff;
-      color: #fff;
-      background: transparent;
-    }
-    .cta-buttons a.secondary:hover {
-      background: rgba(255,255,255,0.1);
-      transform: translateY(-4px);
-    }
-    .mockup {
-      max-width: 800px;
-      margin: 2rem auto 0;
-    }
-    .mockup img {
-      width: 100%;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem;
-    }
+
+    .container { padding: 2.5rem; max-width: 960px; margin: auto; }
+    .section { margin-bottom: 3rem; }
     h2 {
       font-size: 1.8rem;
       color: #7000b6;
@@ -122,189 +45,141 @@
       bottom: -8px;
       border-radius: 2px;
     }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
-    .card {
-      background: #fff;
-      padding: 1.5rem;
+    ul { list-style: disc inside; padding-left: 1rem; }
+
+    .highlight {
+      background: linear-gradient(135deg, #f4e6ff, #fff0f8);
+      padding: 1.8rem;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      margin: 2rem 0;
+    }
+
+    .cta {
       text-align: center;
+      margin: 3rem auto;
     }
-    .card span {
-      font-size: 2rem;
-      display: block;
-      margin-bottom: 0.5rem;
+    .cta a {
+      display: inline-block;
+      background: #7000b6;
+      color: white;
+      padding: 1rem 1.8rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 12px;
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(112, 0, 182, 0.4);
+      transition: all 0.3s ease;
     }
+    .cta a:hover {
+      background: #540088;
+      transform: translateY(-3px);
+    }
+
     .urgency {
       background: #ffeff3;
       color: #b6003a;
       padding: 1rem;
+      margin: 2rem 0;
       border-left: 6px solid #b6003a;
       font-weight: 600;
       text-align: center;
       border-radius: 10px;
-      margin: 2rem 0;
     }
-    .highlight {
-      background: linear-gradient(135deg, #f4e6ff, #fff0f8);
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    }
+
     .testimonials {
       font-style: italic;
+      color: #333;
       background: #f4e6ff;
       border-left: 4px solid #7000b6;
-      color: #333;
       padding: 1rem;
       border-radius: 10px;
       margin: 2rem 0;
     }
-    video {
-      border-radius: 12px;
-      width: 100%;
-      margin-top: 1rem;
-    }
+
     footer {
-      background: #0f0f0f;
-      color: #ccc;
-      padding: 3rem 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 2rem;
-      font-size: 0.95rem;
-    }
-    footer a {
-      color: #eee;
-      text-decoration: none;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
-    @media (min-width: 768px) {
-      .hero {
-        flex-direction: row;
-        align-items: center;
-        text-align: left;
-      }
-      .hero-text {
-        flex: 1;
-      }
-      .mockup {
-        flex: 1;
-      }
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #777;
+      background: #f4e6ff;
     }
   </style>
 </head>
 <body>
-  <nav>
-    <div style="display: flex; align-items: center; gap: 10px;">
-      <img src="/path-to-your-logo.png" alt="Logo Central UX" height="32" />
-      <strong style="font-size: 1rem;">Central UX</strong>
-    </div>
-    <div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
-      <a href="#sobre">Sobre</a>
-      <a href="#video">Ver Template</a>
-      <a href="#contato">Contato</a>
-      <a href="https://mpago.la/2UiSpnp" class="cta">Quero o meu</a>
-    </div>
-  </nav>
 
   <header>
-    <div class="hero">
-      <div class="hero-text">
-        <h1>Organize seus projetos de UX com clareza e método</h1>
-        <p>Template prático no Notion para estudantes, freelancers e profissionais que querem parar de se perder e começar a se destacar.</p>
-        <div class="cta-buttons">
-          <a href="https://mpago.la/2UiSpnp" class="primary">🔓 Quero o meu</a>
-          <a href="#video" class="secondary">🎥 Ver o template</a>
-        </div>
-      </div>
-      <div class="mockup">
-        <img src="/path-to-mockup.png" alt="Mockup do Central UX" />
-      </div>
-    </div>
+     <h1>🧠</h1>
+    <h1>Central UX</h1>
+    <p>🎯 Organize seus projetos de UX com um só clique. Profissionalize seu processo hoje!</p>
+    <div class="cta"><a href="https://mpago.la/2UiSpnp">🔓 Quero meu template por R$19,90</a></div>
   </header>
 
   <main class="container">
+
     <section class="urgency">⚠ Oferta limitada: compre hoje e receba uma call gratuita para explicar como ele funciona!</section>
 
-    <section id="sobre">
-      <h2>Você vai encontrar:</h2>
-      <div class="cards">
-        <div class="card"><span>📁</span>Página inicial com navegação estratégica</div>
-        <div class="card"><span>🧩</span>Seções para pesquisa, jornada, personas e backlog</div>
-        <div class="card"><span>📌</span>Layout 100% customizável</div>
-        <div class="card"><span>💡</span>Modelos e guias internos para facilitar seu uso</div>
-        <div class="card"><span>⚡</span>Link de duplicação imediata e acesso instantâneo</div>
-      </div>
+    <section class="section">
+      <h2>O que é o Central UX?</h2>
+      <p>Um template 100% prático no Notion, feito para centralizar seu processo de UX do início ao fim: pesquisa, jornada, entrega e tudo mais. Ideal para quem quer parar de se perder e começar a se destacar.</p>
     </section>
+
+    <section class="section">
+      <h2>Você vai encontrar:</h2>
+      <ul>
+        <li>📁 Página inicial com navegação estratégica</li>
+        <li>🧩 Seções para pesquisa, jornada, personas e backlog</li>
+        <li>📌 Layout 100% customizável</li>
+        <li>💡 Modelos e guias internos para facilitar seu uso</li>
+        <li>⚡ Link de duplicação imediata e acesso instantâneo</li>
+      </ul>
+    </section>
+
+    <div class="cta">
+      <a href="https://mpago.la/2UiSpnp">💥 Adquirir agora por R$19,90</a>
+    </div>
 
     <section class="highlight">
       <h2>Para quem é?</h2>
-      <div class="cards">
-        <div class="card"><span>👩‍🎓</span>Estudantes de UX/UI</div>
-        <div class="card"><span>👨‍💼</span>Profissionais que querem se organizar</div>
-        <div class="card"><span>🤝</span>Times e freelancers</div>
-        <div class="card"><span>🚀</span>Criadores de produtos</div>
-      </div>
+      <p>✅ Estudantes de UX/UI<br>
+         ✅ Profissionais que querem se organizar<br>
+         ✅ Times e freelancers que precisam de processos claros<br>
+         ✅ Criadores de produtos que desejam mapear experiências reais</p>
     </section>
 
-    <section>
+    <section class="section">
       <h2>Depoimentos 💬</h2>
       <div class="testimonials">
-        “Finalmente encontrei uma forma de organizar meus projetos sem surtar. Obrigada, Vitoria!” – Kauan Alves, estudante de UX e Designer.
+        “Finalmente encontrei uma forma de organizar meus projetos sem surtar. Obrigada, Vitoria!” – Kauan Alves, estudante de UX e Designer.<br><br>
       </div>
     </section>
 
-    <section id="video">
+    <section class="section">
+      <h2>Como funciona?</h2>
+      <ul>
+        <li>1. Você compra via PIX, boleto ou cartão</li>
+        <li>2. Recebe um link exclusivo na hora</li>
+        <li>3. Duplica para o seu Notion</li>
+        <li>4. Começa a usar imediatamente!</li>
+      </ul>
+    </section>
+
+    <section class="section">
       <h2>Veja o template em ação 🎥</h2>
       <p>Confira o vídeo com uma prévia de tudo que você vai receber:</p>
-      <video controls>
-        <source src="/path-to-video.mp4" type="video/mp4">
+      <video controls width="100%" style="border-radius: 12px; margin-top: 1rem;">
+        <source src="Gravação de Tela 2025-06-22 212845.mp4" type="video/mp4">
         Seu navegador não suporta o vídeo.
       </video>
     </section>
 
-    <div class="cta-buttons" style="margin-top: 2rem; justify-content: center;">
-      <a href="https://chat.whatsapp.com/ByC4H8EJh5B25DoZW5UY8A?mode=ac_c" class="primary">💬 Comunidade no WhatsApp</a>
-      <a href="https://www.instagram.com/central_ux/" class="secondary">📸 Instagram</a>
+    <div class="cta">
+      <a href="https://mpago.la/2UiSpnp">🚀 Comprar agora – R$19,90</a>
     </div>
   </main>
 
   <footer>
-    <div class="brand">
-      <img src="/path-to-your-logo.png" alt="Central UX" height="30" />
-      <p>Design para quem quer começar com o pé direito. Simples, prático e humano.</p>
-    </div>
-    <div class="links">
-      <div>
-        <strong>Explorar</strong>
-        <a href="#">Template</a>
-        <a href="#">Guia de uso</a>
-        <a href="#">Benefícios</a>
-      </div>
-      <div>
-        <strong>Suporte</strong>
-        <a href="mailto:centralux0@gmail.com">Email</a>
-        <a href="https://www.instagram.com/central_ux/">Instagram</a>
-        <a href="#">Twitter</a>
-      </div>
-      <div>
-        <strong>Legal</strong>
-        <a href="#">Política de privacidade</a>
-        <a href="#">Termos de uso</a>
-      </div>
-    </div>
-    <div class="bottom">
-      © 2025 Central UX · Feito com ♥ por Vitoria Oliveira
-    </div>
+    © 2025 Central UX · Feito com ♥ por Vitoria Oliveira 
   </footer>
 </body>
 </html>
