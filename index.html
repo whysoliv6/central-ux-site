@@ -15,12 +15,13 @@
     }
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #0e001d, #1a0032);
-      color: #f9f9f9;
+      background: #0e0018;
+      color: #ffffff;
       line-height: 1.6;
     }
     nav {
       background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 999px;
       padding: 0.8rem 2rem;
       margin: 1.5rem auto;
@@ -28,7 +29,6 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      backdrop-filter: blur(10px);
     }
     nav a {
       text-decoration: none;
@@ -36,7 +36,7 @@
       font-size: 0.95rem;
     }
     nav a.cta {
-      background: #d400ac;
+      background: #7000b6;
       color: #fff;
       padding: 0.6rem 1.4rem;
       border-radius: 50px;
@@ -45,6 +45,7 @@
     header {
       text-align: center;
       padding: 6rem 2rem 3rem;
+      background: radial-gradient(circle at top left, #7a00f1, #d400ac, #1b0b3a);
     }
     .hero {
       display: flex;
@@ -59,10 +60,12 @@
     .hero h1 {
       font-size: 2.4rem;
       font-weight: 700;
+      max-width: 600px;
     }
     .hero p {
       font-size: 1.1rem;
       max-width: 600px;
+      color: #e0d4e8;
     }
     .cta-buttons {
       display: flex;
@@ -78,23 +81,23 @@
       text-decoration: none;
       font-size: 1rem;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
     }
     .cta-buttons a.primary {
-      background: #d400ac;
-      color: white;
+      background: #ffffff;
+      color: #7000b6;
     }
     .cta-buttons a.primary:hover {
-      background: #9e007f;
+      background: #f4e6ff;
       transform: translateY(-4px);
     }
     .cta-buttons a.secondary {
-      border: 2px solid #d400ac;
-      color: #d400ac;
+      border: 2px solid #fff;
+      color: #fff;
       background: transparent;
     }
     .cta-buttons a.secondary:hover {
-      background: rgba(255,255,255,0.05);
+      background: rgba(255,255,255,0.1);
       transform: translateY(-4px);
     }
     .mockup {
@@ -117,7 +120,7 @@
     }
     h2 {
       font-size: 1.8rem;
-      color: #f9f9f9;
+      color: #f4e6ff;
       margin-bottom: 1rem;
       position: relative;
     }
@@ -143,6 +146,7 @@
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       text-align: center;
+      color: #fff;
     }
     .card span {
       font-size: 2rem;
@@ -151,25 +155,25 @@
     }
     .urgency {
       background: #b6003a;
-      color: white;
+      color: #fff;
       padding: 1rem;
-      border-left: 6px solid #ff4d8b;
+      border-left: 6px solid #ffb6c1;
       font-weight: 600;
       text-align: center;
       border-radius: 10px;
       margin: 2rem 0;
     }
     .highlight {
-      background: rgba(255,255,255,0.03);
+      background: linear-gradient(135deg, #2b003d, #3d004f);
       padding: 2rem;
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     }
     .testimonials {
       font-style: italic;
-      background: rgba(255,255,255,0.05);
-      border-left: 4px solid #d400ac;
-      color: #f0f0f0;
+      background: #2b003d;
+      border-left: 4px solid #7000b6;
+      color: #ddd;
       padding: 1rem;
       border-radius: 10px;
       margin: 2rem 0;
@@ -180,7 +184,7 @@
       margin-top: 1rem;
     }
     footer {
-      background: #0a0016;
+      background: #0f0f0f;
       color: #ccc;
       padding: 3rem 2rem;
       display: flex;
@@ -204,6 +208,107 @@
   </style>
 </head>
 <body>
-  <!-- Aqui entra o conteúdo HTML já presente, mantido e adaptado para o novo visual -->
+  <nav>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <img src="https://via.placeholder.com/32" alt="Logo Central UX" />
+      <strong style="font-size: 1rem; color: #fff">Central UX</strong>
+    </div>
+    <div style="display: flex; align-items: center; gap: 1.5rem;">
+      <a href="#sobre">Sobre</a>
+      <a href="#video">Ver Template</a>
+      <a href="#contato">Contato</a>
+      <a href="https://mpago.la/2UiSpnp" class="cta">Quero o meu</a>
+    </div>
+  </nav>
+
+  <header>
+    <div class="hero">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" alt="Ícone Notion" class="logo" />
+      <h1>Organize seus projetos de UX com clareza e método</h1>
+      <p>Template prático no Notion para estudantes, freelancers e profissionais que querem parar de se perder e começar a se destacar.</p>
+      <div class="cta-buttons">
+        <a href="https://mpago.la/2UiSpnp" class="primary">🔓 Quero o meu</a>
+        <a href="#video" class="secondary">🎥 Ver o template</a>
+      </div>
+      <div class="mockup">
+        <img src="https://via.placeholder.com/800x500.png?text=Mockup+do+Template" alt="Mockup do Central UX" />
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="urgency">⚠ Oferta limitada: compre hoje e receba uma call gratuita para explicar como ele funciona!</section>
+
+    <section id="sobre">
+      <h2>Você vai encontrar:</h2>
+      <div class="cards">
+        <div class="card"><span>📁</span>Página inicial com navegação estratégica</div>
+        <div class="card"><span>🧩</span>Seções para pesquisa, jornada, personas e backlog</div>
+        <div class="card"><span>📌</span>Layout 100% customizável</div>
+        <div class="card"><span>💡</span>Modelos e guias internos para facilitar seu uso</div>
+        <div class="card"><span>⚡</span>Link de duplicação imediata e acesso instantâneo</div>
+      </div>
+    </section>
+
+    <section class="highlight">
+      <h2>Para quem é?</h2>
+      <div class="cards">
+        <div class="card"><span>👩‍🎓</span>Estudantes de UX/UI</div>
+        <div class="card"><span>🧑‍💼</span>Profissionais que querem se organizar</div>
+        <div class="card"><span>🤝</span>Times e freelancers</div>
+        <div class="card"><span>🚀</span>Criadores de produtos</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Depoimentos 💬</h2>
+      <div class="testimonials">
+        “Finalmente encontrei uma forma de organizar meus projetos sem surtar. Obrigada, Vitoria!” – Kauan Alves, estudante de UX e Designer.
+      </div>
+    </section>
+
+    <section id="video">
+      <h2>Veja o template em ação 🎥</h2>
+      <p>Confira o vídeo com uma prévia de tudo que você vai receber:</p>
+      <video controls>
+        <source src="Gravacao-de-Tela-2025-06-22-212845.mp4" type="video/mp4">
+        Seu navegador não suporta o vídeo.
+      </video>
+    </section>
+
+    <div class="cta-buttons" style="margin-top: 2rem; justify-content: center;">
+      <a href="https://chat.whatsapp.com/ByC4H8EJh5B25DoZW5UY8A?mode=ac_c" class="primary">💬 Comunidade no WhatsApp</a>
+      <a href="https://www.instagram.com/central_ux/" class="secondary">📸 Instagram</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="brand">
+      <img src="https://via.placeholder.com/120x30?text=Central+UX" alt="Central UX" />
+      <p>Design para quem quer começar com o pé direito. Simples, prático e humano.</p>
+    </div>
+    <div class="links">
+      <div>
+        <strong>Explorar</strong>
+        <a href="#">Template</a>
+        <a href="#">Guia de uso</a>
+        <a href="#">Benefícios</a>
+      </div>
+      <div>
+        <strong>Suporte</strong>
+        <a href="mailto:centralux0@gmail.com">Email</a>
+        <a href="https://www.instagram.com/central_ux/">Instagram</a>
+        <a href="#">Twitter</a>
+      </div>
+      <div>
+        <strong>Legal</strong>
+        <a href="#">Política de privacidade</a>
+        <a href="#">Termos de uso</a>
+      </div>
+    </div>
+    <div class="bottom">
+      © 2025 Central UX · Feito com ♥ por Vitoria Oliveira
+    </div>
+  </footer>
 </body>
 </html>
