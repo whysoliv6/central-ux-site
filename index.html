@@ -10,57 +10,68 @@
     * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
     body {
       font-family: 'Inter', sans-serif;
-      background: #ffffff;
+      background: #fdfbff;
       color: #1e1e1e;
       line-height: 1.6;
     }
     nav {
-      background: #f5f5f5;
+      background: #f4e6ff;
       border-radius: 999px;
-      padding: 0.8rem 2rem;
+      padding: 1rem 2rem;
       margin: 1.5rem auto;
       max-width: 1000px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    nav .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    nav .logo img {
+      width: 40px;
+      height: 40px;
     }
     nav a {
       text-decoration: none;
       color: #222;
-      font-size: 0.95rem;
+      font-size: 1rem;
     }
     nav a.cta {
-      background: #111;
+      background: #7000b6;
       color: #fff;
       padding: 0.6rem 1.4rem;
       border-radius: 50px;
       font-weight: 600;
     }
     header {
-      text-align: center;
-      padding: 6rem 2rem 3rem;
-      background: #fff;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem 3rem;
+      gap: 3rem;
+      max-width: 1000px;
+      margin: 0 auto;
     }
-    header img.logo {
-      width: 80px;
-      margin-bottom: 2rem;
-      animation: float 4s ease-in-out infinite;
+    header .text {
+      flex: 1 1 400px;
     }
     header h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      color: #1e1e1e;
-      margin-bottom: 1.5rem;
+      font-size: 2.6rem;
+      color: #7000b6;
+      margin-bottom: 1rem;
     }
     header p {
       font-size: 1.1rem;
       color: #555;
-      max-width: 600px;
-      margin: 0 auto 2rem;
+      margin-bottom: 2rem;
     }
     .cta-buttons {
       display: flex;
-      justify-content: center;
       gap: 1rem;
       flex-wrap: wrap;
     }
@@ -70,156 +81,158 @@
       border-radius: 50px;
       text-decoration: none;
       font-size: 1rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
     }
-    .cta-buttons a.primary {
-      background: #7000b6;
-      color: white;
-    }
-    .cta-buttons a.primary:hover {
-      background: #540088;
-      transform: translateY(-4px);
-    }
-    .cta-buttons a.secondary {
-      border: 2px solid #7000b6;
-      color: #7000b6;
-      background: transparent;
-    }
-    .cta-buttons a.secondary:hover {
-      background: #f4e6ff;
-      transform: translateY(-4px);
-    }
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0); }
-    }
+    .primary { background: #7000b6; color: white; }
+    .secondary { border: 2px solid #7000b6; color: #7000b6; background: transparent; }
     .mockup {
-      margin-top: 3rem;
-      perspective: 1000px;
+      flex: 1 1 400px;
     }
     .mockup img {
-      max-width: 100%;
+      width: 100%;
       border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease;
-      transform-style: preserve-3d;
+      background: transparent;
     }
-    .mockup img:hover {
-      transform: rotateY(6deg) rotateX(6deg) scale(1.02);
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
     }
-    .depoimento {
-      background: url('https://chat.openai.com/_next/image?url=https%3A%2F%2Ffiles.oaiusercontent.com%2Ffile-RrS9JrCzYBghmJKXrzMTwH%3Foriginal=true&w=384&q=75') no-repeat center/contain;
-      max-width: 400px;
-      margin: 4rem auto;
-      border-radius: 20px;
-      height: auto;
-      aspect-ratio: 3/4;
-      box-shadow: 0 8px 28px rgba(0,0,0,0.15);
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .highlight, .urgency {
+      background: #fff0f8;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      margin: 2rem 0;
+      border-left: 4px solid #d400ac;
     }
     footer {
-      background: #0f0f0f;
-      color: #ccc;
+      background: #f4e6ff;
+      color: #333;
       padding: 3rem 2rem;
+      font-size: 0.95rem;
+    }
+    footer .footer-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       gap: 2rem;
-      font-size: 0.95rem;
-    }
-    footer .brand {
-      flex: 1 1 250px;
-    }
-    footer .brand img {
-      height: 30px;
-      margin-bottom: 0.8rem;
-    }
-    footer .links {
-      display: flex;
-      gap: 3rem;
-      flex-wrap: wrap;
-    }
-    footer .links div {
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
+      max-width: 1000px;
+      margin: auto;
     }
     footer a {
-      color: #eee;
+      color: #7000b6;
       text-decoration: none;
     }
     footer a:hover {
       text-decoration: underline;
     }
     footer .bottom {
-      margin-top: 2rem;
       text-align: center;
-      width: 100%;
-      font-size: 0.85rem;
+      margin-top: 2rem;
       color: #666;
     }
   </style>
 </head>
 <body>
-  <!-- NAVBAR ESTILO MOBBIN -->
   <nav>
-    <div style="display: flex; align-items: center; gap: 10px;">
-      <img src="https://via.placeholder.com/32" alt="Logo Central UX" />
-      <strong style="font-size: 1rem;">Central UX</strong>
+    <div class="logo">
+      <img src="ICON CENTRAL UX.png" alt="Logo Central UX">
+      <strong>Central UX</strong>
     </div>
-    <div style="display: flex; align-items: center; gap: 1.5rem;">
+    <div>
       <a href="#sobre">Sobre</a>
       <a href="#video">Ver Template</a>
-      <a href="#contato">Contato</a>
+      <a href="https://chat.whatsapp.com/ByC4H8EJh5B25DoZW5UY8A">Comunidade</a>
       <a href="https://mpago.la/2UiSpnp" class="cta">Quero o meu</a>
     </div>
   </nav>
 
-  <!-- HERO SECTION COM MOCKUP -->
   <header>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" alt="Ícone Notion" class="logo" />
-    <h1>Organize seus projetos de UX com clareza e método</h1>
-    <p>Template prático no Notion para estudantes, freelancers e profissionais que querem parar de se perder e começar a se destacar.</p>
-    <div class="cta-buttons">
-      <a href="https://mpago.la/2UiSpnp" class="primary">🔓 Quero o meu</a>
-      <a href="#video" class="secondary">🎥 Ver o template</a>
+    <div class="text">
+      <h1>Organize seus projetos de UX com clareza</h1>
+      <p>Template completo no Notion para estudantes, freelancers e times que querem trabalhar com método e organização.</p>
+      <div class="cta-buttons">
+        <a href="https://mpago.la/2UiSpnp" class="primary">🔓 Quero o meu</a>
+        <a href="#video" class="secondary">🎥 Ver o template</a>
+      </div>
     </div>
     <div class="mockup">
-      <img src="https://via.placeholder.com/800x500.png?text=Mockup+do+Template" alt="Mockup do Central UX" />
+      <img src="ZenBook Duo 14.png" alt="Mockup Central UX">
     </div>
   </header>
 
-  <!-- DEPOIMENTO COM IMAGEM -->
-  <div class="depoimento"></div>
+  <main class="container">
+    <section id="sobre" class="urgency">
+      ⚠ Oferta limitada: compre hoje e receba uma call gratuita para tirar dúvidas sobre o uso!
+    </section>
 
-  <!-- FOOTER ESCURO -->
+    <section class="section">
+      <h2>Você vai encontrar:</h2>
+      <div class="card-grid">
+        <div class="card"><h3>📁 Navegação estratégica</h3><p>Homepage com acesso claro a todas as áreas do projeto.</p></div>
+        <div class="card"><h3>🧩 Estrutura completa</h3><p>Pesquisa, jornada, backlog, personas e mais.</p></div>
+        <div class="card"><h3>📌 Totalmente editável</h3><p>Adapte conforme seu fluxo de trabalho.</p></div>
+        <div class="card"><h3>💡 Guias internos</h3><p>Modelos prontos e dicas aplicáveis.</p></div>
+        <div class="card"><h3>⚡ Acesso imediato</h3><p>Compre e comece a usar agora mesmo.</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Para quem é?</h2>
+      <div class="card-grid">
+        <div class="card"><h3>👩‍🎓 Estudantes</h3><p>Aprenda na prática como montar projetos reais.</p></div>
+        <div class="card"><h3>💼 Profissionais</h3><p>Ganhe mais produtividade e visão.</p></div>
+        <div class="card"><h3>🤝 Freelancers e times</h3><p>Padronize entregas com consistência.</p></div>
+        <div class="card"><h3>🚀 Criadores</h3><p>Mapeie jornadas e entregue experiências reais.</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="video">
+      <h2>Veja o template em ação 🎥</h2>
+      <p>Assista a uma prévia do que você vai receber:</p>
+      <video controls width="100%" style="border-radius: 12px; margin-top: 1rem;">
+        <source src="Gravação de Tela 2025-06-22 212845.mp4" type="video/mp4">
+        Seu navegador não suporta o vídeo.
+      </video>
+    </section>
+  </main>
+
   <footer>
-    <div class="brand">
-      <img src="https://via.placeholder.com/120x30?text=Central+UX" alt="Central UX" />
-      <p>Design para quem quer começar com o pé direito. Simples, prático e humano.</p>
-    </div>
-    <div class="links">
+    <div class="footer-grid">
+      <div>
+        <img src="ICON CENTRAL UX.png" alt="Logo" style="width: 50px;">
+        <p>Design para quem quer começar com o pé direito.</p>
+      </div>
       <div>
         <strong>Explorar</strong>
-        <a href="#">Template</a>
-        <a href="#">Guia de uso</a>
-        <a href="#">Benefícios</a>
+        <p><a href="#">Template</a></p>
+        <p><a href="#">Benefícios</a></p>
       </div>
       <div>
         <strong>Suporte</strong>
-        <a href="mailto:centralux0@gmail.com">Email</a>
-        <a href="#">Instagram</a>
-        <a href="#">Twitter</a>
-      </div>
-      <div>
-        <strong>Legal</strong>
-        <a href="#">Política de privacidade</a>
-        <a href="#">Termos de uso</a>
+        <p><a href="mailto:centralux0@gmail.com">Email</a></p>
+        <p><a href="https://www.instagram.com/central_ux/">Instagram</a></p>
+        <p><a href="https://chat.whatsapp.com/ByC4H8EJh5B25DoZW5UY8A">Comunidade</a></p>
       </div>
     </div>
     <div class="bottom">
-      © 2025 Central UX · Feito com ♥ por Vitoria Oliveira
+      © 2025 Central UX · Criado com ♥ por Vitoria Oliveira
     </div>
   </footer>
 </body>
