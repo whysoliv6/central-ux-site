@@ -7,28 +7,151 @@
   <title>Central UX | Organize seus Projetos de UX Agora</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; background: #fdfbff; color: #1e1e1e; line-height: 1.6; }
-    header {
-      background: radial-gradient(circle at top left, #7a00f1, #d400ac, #1b0b3a);
-      color: white;
-      padding: 5rem 2rem 3rem;
-      text-align: center;
+    * {
+      margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth;
     }
-    header img { max-width: 140px; margin-bottom: 1rem; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fdfbff;
+      color: #1e1e1e;
+      line-height: 1.6;
+    }
+    /* NAVBAR estilo Mobbin */
+    nav {
+      background: #f5f5f5;
+      border-radius: 999px;
+      padding: 0.8rem 2rem;
+      margin: 1.5rem auto;
+      max-width: 1000px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    nav a {
+      text-decoration: none;
+      color: #222;
+      font-size: 0.95rem;
+    }
+    nav a.cta {
+      background: #7000b6;
+      color: #fff;
+      padding: 0.6rem 1.4rem;
+      border-radius: 50px;
+      font-weight: 600;
+      box-shadow: 0 6px 18px rgba(112, 0, 182, 0.4);
+      transition: all 0.3s ease;
+    }
+    nav a.cta:hover {
+      background: #540088;
+      transform: translateY(-3px);
+    }
+    nav div:first-child {
+      display: flex; 
+      align-items: center; 
+      gap: 10px;
+    }
+    nav div:last-child {
+      display: flex; 
+      align-items: center; 
+      gap: 1.5rem;
+    }
+    nav img {
+      width: 32px;
+      height: 32px;
+    }
+
+    /* HEADER com mockup e animação */
+    header {
+      text-align: center;
+      padding: 6rem 2rem 3rem;
+      background: transparent;
+      max-width: 960px;
+      margin: 0 auto 3rem;
+    }
+    header img.logo {
+      width: 80px;
+      margin-bottom: 2rem;
+      animation: float 4s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
     header h1 {
-      font-size: 2.8rem;
+      font-size: 3rem;
       font-weight: 700;
+      color: #7000b6;
       margin-bottom: 1rem;
     }
     header p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
+      color: #555;
       max-width: 600px;
-      margin: 0 auto;
+      margin: 0 auto 2rem;
+    }
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+    .cta-buttons a {
+      padding: 0.9rem 1.6rem;
+      font-weight: 600;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 18px rgba(112, 0, 182, 0.4);
+    }
+    .cta-buttons a.primary {
+      background: #7000b6;
+      color: white;
+    }
+    .cta-buttons a.primary:hover {
+      background: #540088;
+      transform: translateY(-4px);
+    }
+    .cta-buttons a.secondary {
+      border: 2px solid #7000b6;
+      color: #7000b6;
+      background: transparent;
+    }
+    .cta-buttons a.secondary:hover {
+      background: #f4e6ff;
+      transform: translateY(-4px);
     }
 
-    .container { padding: 2.5rem; max-width: 960px; margin: auto; }
-    .section { margin-bottom: 3rem; }
+    /* MOCKUP interativo */
+    .mockup {
+      perspective: 1000px;
+      max-width: 800px;
+      margin: 0 auto 3rem;
+    }
+    .mockup img {
+      max-width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
+    .mockup img:hover {
+      transform: rotateY(6deg) rotateX(6deg) scale(1.02);
+    }
+
+    /* CONTAINER para conteúdo principal */
+    .container {
+      padding: 0 2.5rem 4rem;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
     h2 {
       font-size: 1.8rem;
       color: #7000b6;
@@ -45,37 +168,23 @@
       bottom: -8px;
       border-radius: 2px;
     }
-    ul { list-style: disc inside; padding-left: 1rem; }
+    ul {
+      list-style: disc inside;
+      padding-left: 1rem;
+      color: #333;
+    }
 
+    /* Destaques */
     .highlight {
       background: linear-gradient(135deg, #f4e6ff, #fff0f8);
       padding: 1.8rem;
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
       margin: 2rem 0;
+      color: #333;
     }
 
-    .cta {
-      text-align: center;
-      margin: 3rem auto;
-    }
-    .cta a {
-      display: inline-block;
-      background: #7000b6;
-      color: white;
-      padding: 1rem 1.8rem;
-      font-size: 1.1rem;
-      font-weight: 600;
-      border-radius: 12px;
-      text-decoration: none;
-      box-shadow: 0 6px 18px rgba(112, 0, 182, 0.4);
-      transition: all 0.3s ease;
-    }
-    .cta a:hover {
-      background: #540088;
-      transform: translateY(-3px);
-    }
-
+    /* Urgência */
     .urgency {
       background: #ffeff3;
       color: #b6003a;
@@ -87,6 +196,16 @@
       border-radius: 10px;
     }
 
+    /* Depoimentos */
+    .depoimento {
+      background: url('"Dark_4.png"') no-repeat center/contain;
+      max-width: 400px;
+      margin: 4rem auto 5rem;
+      border-radius: 20px;
+      height: auto;
+      aspect-ratio: 3/4;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.15);
+    }
     .testimonials {
       font-style: italic;
       color: #333;
@@ -95,29 +214,92 @@
       padding: 1rem;
       border-radius: 10px;
       margin: 2rem 0;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
+    /* FOOTER escuro */
     footer {
+      background: #7000b6;
+      color: #ccc;
+      padding: 3rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+      font-size: 0.95rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      border-radius: 12px 12px 0 0;
+    }
+    footer .brand {
+      flex: 1 1 250px;
+    }
+    footer .brand img {
+      height: 30px;
+      margin-bottom: 0.8rem;
+    }
+    footer .links {
+      display: flex;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    footer .links div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    footer a {
+      color: #eee;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    footer .bottom {
+      margin-top: 2rem;
       text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #777;
-      background: #f4e6ff;
+      width: 100%;
+      font-size: 0.85rem;
+      color: #666;
     }
   </style>
 </head>
 <body>
+  <!-- NAVBAR ESTILO MOBBIN -->
+  <nav>
+    <div>
+      <img src="ICON CENTRAL UX.png" alt="Logo Central UX" />
+      <strong>Central UX</strong>
+    </div>
+    <div>
+      <a href="#sobre">Sobre</a>
+      <a href="#video">Ver Template</a>
+      <a href="‎https://chat.whatsapp.com/ByC4H8EJh5B25DoZW5UY8A?mode=ac_c">Comunidade no WhatsApp</a>
+      <a href="https://mpago.la/2UiSpnp" class="cta">Quero o meu</a>
+    </div>
+  </nav>
 
+  <!-- HERO SECTION COM MOCKUP -->
   <header>
-     <h1>🧠</h1>
-    <h1>Central UX</h1>
-    <p>🎯 Organize seus projetos de UX com um só clique. Profissionalize seu processo hoje!</p>
-    <div class="cta"><a href="https://mpago.la/2UiSpnp">🔓 Quero meu template por R$19,90</a></div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" alt="Ícone Notion" class="logo" />
+    <h1>Organize seus projetos de UX com clareza e método</h1>
+    <p>Template prático no Notion para estudantes, freelancers e profissionais que querem parar de se perder e começar a se destacar.</p>
+    <div class="cta-buttons">
+      <a href="https://mpago.la/2UiSpnp" class="primary">🔓 Quero o meu</a>
+      <a href="#video" class="secondary">🎥 Ver o template</a>
+    </div>
+    <div class="mockup">
+      <img src=""ZenBook Duo 14.png"" alt="Mockup do Central UX" />
+    </div>
   </header>
 
+  <!-- CONTEÚDO PRINCIPAL -->
   <main class="container">
-
-    <section class="urgency">⚠ Oferta limitada: compre hoje e receba uma call gratuita para explicar como ele funciona!</section>
+    <section id="sobre" class="urgency">
+      ⚠ Oferta limitada: compre hoje e receba uma call sem custo para tirar dúvidas e saber como ele funciona!
+    </section>
 
     <section class="section">
       <h2>O que é o Central UX?</h2>
@@ -135,10 +317,6 @@
       </ul>
     </section>
 
-    <div class="cta">
-      <a href="https://mpago.la/2UiSpnp">💥 Adquirir agora por R$19,90</a>
-    </div>
-
     <section class="highlight">
       <h2>Para quem é?</h2>
       <p>✅ Estudantes de UX/UI<br>
@@ -152,9 +330,10 @@
       <div class="testimonials">
         “Finalmente encontrei uma forma de organizar meus projetos sem surtar. Obrigada, Vitoria!” – Kauan Alves, estudante de UX e Designer.<br><br>
       </div>
+      <div class="depoimento"></div>
     </section>
 
-    <section class="section">
+    <section id="como-funciona" class="section">
       <h2>Como funciona?</h2>
       <ul>
         <li>1. Você compra via PIX, boleto ou cartão</li>
@@ -164,7 +343,7 @@
       </ul>
     </section>
 
-    <section class="section">
+    <section id="video" class="section">
       <h2>Veja o template em ação 🎥</h2>
       <p>Confira o vídeo com uma prévia de tudo que você vai receber:</p>
       <video controls width="100%" style="border-radius: 12px; margin-top: 1rem;">
@@ -173,13 +352,38 @@
       </video>
     </section>
 
-    <div class="cta">
-      <a href="https://mpago.la/2UiSpnp">🚀 Comprar agora – R$19,90</a>
+    <div class="cta-buttons" style="justify-content:center; margin-top: 2rem;">
+      <a href="https://mpago.la/2UiSpnp" class="primary">🚀 Comprar agora – R$19,90</a>
     </div>
   </main>
 
+  <!-- FOOTER ESCURO -->
   <footer>
-    © 2025 Central UX · Feito com ♥ por Vitoria Oliveira · Contato: centralux0@gmail.com
+    <div class="brand">
+      <img src=""ICON CENTRAL UX.png"" alt="Central UX" />
+      <p>Design para quem quer começar com o pé direito. </p>
+    </div>
+    <div class="links">
+      <div>
+        <strong>Explorar</strong>
+        <a href="#">Template</a>
+        <a href="#">Benefícios</a>
+      </div>
+      <div>
+        <strong>Suporte</strong>
+        <a href="mailto:centralux0@gmail.com">Email</a>
+        <a href="https://www.instagram.com/central_ux/">Instagram</a>
+         <a href=" ‪https://chat.whatsapp.com/ByC4H8EJh5B25DoZW5UY8A?mode=ac_c">Comunidade WhatsApp</a>
+      </div>
+      <div>
+        <strong>Legal</strong>
+        <a href="#">Política de privacidade</a>
+        <a href="#">Termos de uso</a>
+      </div>
+    </div>
+    <div class="bottom">
+      © 2025 Central UX · Feito com ♥ por Vitoria Oliveira 
+    </div>
   </footer>
 </body>
 </html>
